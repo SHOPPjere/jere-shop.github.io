@@ -1,0 +1,248 @@
+/* 🌍 Réglages généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🎨 Header */
+header {
+    background: #0284c7;
+    color: rgb(250, 248, 248);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.dark-mode header {
+    background: #1f1f1f;
+}
+
+/* 🔹 Titre */
+h1 {
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* 🔹 Conteneur du titre */
+.titre-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* 🔎 Barre de recherche */
+#search {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* 🔹 Filtre */
+#filtre {
+    width: 150px;
+    padding: 8px;
+    margin-left: 10px;
+}
+
+/* 🔹 Produits */
+.produits {
+    display: flex;
+    gap: 20px; /* Réduit l'espace entre les produits pour un meilleur agencement */
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les produits harmonieusement */
+}
+
+/* 📦 Produits individuels */
+.produit {
+    width: 250px;
+    height: 400px; /* Fixe une hauteur uniforme */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Répartit bien les éléments */
+    align-items: center;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    overflow: hidden; /* Empêche les éléments de dépasser */
+    transition: transform 0.3s ease-in-out; /* Animation fluide */
+}
+
+.produit p {
+    max-height: 60px; /* Limite la hauteur des paragraphes */
+    overflow: hidden; /* Coupe le texte s’il est trop long */
+    text-overflow: ellipsis; /* Ajoute "..." si le texte est trop long */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    margin-top: 1px; /* Réduit l’espace au-dessus du texte */
+    font-size: 8.5px; /* Diminue légèrement la taille du texte */
+    transition: opacity 0.8s ease-in-out;
+}
+
+.produit:hover {
+    transform: scale(1.05);
+}
+
+.produit button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+/* 🎭 Images des produits */
+.produit img {
+    width: 100%;
+    max-width: 220px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.produit h3 {
+    margin-bottom: 1px; /* Réduit l’espace sous le titre */
+    transition: color 0.5s ease-in-out, letter-spacing 0.3s ease-in-out;
+}
+.produit h3:hover {
+    color: #ff6500; /* Change la couleur au survol */
+    letter-spacing: 1.5px; /* Écarte légèrement les lettres */
+}
+.produit h3 {
+    display: inline-block;
+    animation: chicText 2s infinite ease-in-out;
+}
+
+/* 💰 Prix */
+.prix {
+    font-weight: bold;
+    margin-bottom: 2px; /* Réduit l’espace sous le titre */
+}
+
+.stock-dispo {
+    font-size: 14px; /* Réduit la taille du texte */
+    margin-top: 2px; /* Évite un espace trop grand sous le prix */
+    color: #080808; /* Met le texte en vert pour indiquer la disponibilité */
+    font-weight: bold;
+}
+
+/* 🎨 Boutons */
+button {
+    background: #05c47b;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    transition: background 0.4s ease-in-out, transform 0.2s ease-in-out;
+}
+button:hover {
+    background: #ff6500;
+    transform: scale(1.05); /* Légère animation au clic */
+}
+.dark-mode button {
+    background: #444;
+}
+
+/* 🕶 Mode sombre */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+.dark-mode .produits {
+    background: #222;
+}
+.dark-mode .prix {
+    color: #FFD700;
+}
+.dark-mode .categories a {
+    color: #FFD700;
+}
+/* 📌 Mode sombre pour le panier */
+.dark-mode .panier-item {
+    background-color: #333;
+    color: white;
+}
+
+/* 📌 Catégories */
+.categories {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+.categories a {
+    text-decoration: none;
+    color: #ff6500;
+    font-weight: bold;
+}
+
+/* 📌 Style du panier */
+.panier-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.panier-item p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#contact {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+#contact button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+@keyframes chicText {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-2px); }
+    100% { transform: translateY(0px); }
+}
+.promo {
+    background: #ff6500;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.stock-bar {
+    width: 100%;
+    height: 8px;
+    background: lightgray;
+    border-radius: 5px;
+    position: relative;
+}
+
+.stock-bar div {
+    height: 100%;
+    background: green;
+    border-radius: 5px;
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jere Shop - Ma boutique en ligne</title>
+
+    <!-- ✅ Ajout des balises SEO -->
+    <meta name="keywords" content="smartphone, montres connectées, mode, vêtements, casque bluetooth, chaussures">
+    <meta name="description" content="Jere Shop - Boutique e-commerce avec les meilleures offres électroniques et mode.">
+    <meta name="author" content="Jere Shop">
+    <meta name="google-site-verification" content="8563559372297e2d">
+    <meta name="robots" content="index, follow"> <!-- Dit aux moteurs de recherche d'indexer le site -->
+    <meta property="og:title" content="Jere Shop - Boutique en ligne">
+    <meta property="og:description" content="Découvrez les meilleures offres électroniques et mode sur Jere Shop.">
+    <meta property="og:image" content="https://jere-shop.com/logo.jpg">
+    <meta property="og:url" content="https://jere-shop.com">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jere Shop - Boutique en ligne">
+    <meta name="twitter:description" content="Découvrez les meilleures offres électroniques et mode sur Jere Shop.">
+    <meta name="twitter:image" content="https://jere-shop.com/logo.jpg">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="titre-container">
+            <h1>Bienvenue dans Ma Boutique</h1>
+        </div>
+
+        <!-- ✅ Ajout de la barre de navigation ici -->
+        <nav class="categories">
+            <ul>
+               <li><a href="index.html">Accueil</a></li>
+               <li><a href="electronique.html">Électronique</a></li>
+               <li><a href="vetements.html">Vêtements</a></li>
+               </ul>
+        </nav>
+
+        <button id="toggleMode">Mode sombre</button>
+    </header>
+
+    <div class="promo">
+       <p>-10% sur les produits électroniques jusqu’à dimanche !</p>
+    </div>
+
+    <main>
+
+        <input type="text" id="search" placeholder="Rechercher un produit...">
+
+        <select id="filtreAvance">
+           <option value="populaire">Populaire</option>
+           <option value="prixAsc">Prix croissant</option>
+           <option value="prixDesc">Prix décroissant</option>
+        </select>
+
+        <section class="produits">
+            <h2>Électronique</h2>
+            <div class="produit" data-id="1" data-categorie="electronique" data-nom="Smartphone" data-prix="600">
+                <img src="smartphone.jpg" alt="Smartphone">
+                <h3>Smartphone Haut de Gamme</h3>
+                <p class="description">Performances exceptionnelles avec écran AMOLED et batterie longue durée.</p>
+                <p class="prix">600€</p> <!-- Assure que le prix est bien visible -->
+
+                <!-- Barre de stock juste après le prix -->
+                <div class="stock-bar">
+                   <div class="progression-stock"></div>
+                </div>
+
+                <p class="stock-dispo">Stock restant : 10</p>
+                <button class="wishlist">❤️ Ajouter aux favoris</button>
+                <button class="ajouter-panier">Ajouter au panier</button>
+            </div>
+
+            <div class="produit" data-id="3" data-categorie="electronique" data-nom="Casque Bluetooth" data-prix="120">
+                <img src="casque.jpg" alt="Casque Bluetooth">
+                <h3>Casque Bluetooth</h3>
+                <p class="description">Son immersif et réduction de bruit active.</p>
+                <p class="prix">120€</p>
+
+                <!-- Barre de stock juste après le prix -->
+                <div class="stock-bar">
+                   <div class="progression-stock"></div>
+                </div>
+
+                <p class="stock-dispo">Stock restant : 9</p>
+                <button class="wishlist">❤️ Ajouter aux favoris</button>
+                <button class="ajouter-panier">Ajouter au panier</button>
+            </div>
+
+            <div class="produit" data-id="5" data-categorie="electronique" data-nom="Ordinateur Portable" data-prix="750">
+                <img src="ordinateur.jpg" alt="Ordinateur Portable">
+                <h3>Ordinateur Portable</h3>
+                <p class="description">Performances rapides avec SSD et écran HD.</p>
+                <p class="prix">750€</p>
+
+                <!-- Barre de stock juste après le prix -->
+                <div class="stock-bar">
+                   <div class="progression-stock"></div>
+                </div>
+
+                <p class="stock-dispo">Stock restant : 5</p>
+                <button class="wishlist">❤️ Ajouter aux favoris</button>
+                <button class="ajouter-panier">Ajouter au panier</button>
+            </div>
+
+            <div class="produit" data-id="6" data-categorie="electronique" data-nom="Montre Tactile" data-prix="180">
+                <img src="montre-tactile.jpg" alt="Montre Tactile">
+                <h3>Montre Tactile</h3>
+                <p class="description">Écran HD, suivi sportif et notifications intelligentes.</p>
+                <p class="prix">180€</p>
+
+                <!-- Barre de stock juste après le prix -->
+                <div class="stock-bar">
+                   <div class="progression-stock"></div>
+                </div>
+
+                <p class="stock-dispo">Stock restant : 6</p>
+                <button class="wishlist">❤️ Ajouter aux favoris</button>
+                <button class="ajouter-panier">Ajouter au panier</button>
+            </div>
+
+            <div class="produit" data-id="7" data-categorie="electronique" data-nom="Tablette Graphique" data-prix="320">
+                <img src="tablette-graphique.jpg" alt="Tablette Graphique">
+                <h3>Tablette Graphique Professionnelle</h3>
+                <p>Écran haute résolution, parfait pour les artistes et les designers.</p>
+                <p class="prix">320€</p>
+
+                <!-- Barre de stock juste après le prix -->
+                <div class="stock-bar">
+                   <div class="progression-stock"></div>
+                </div>
+
+                <p class="stock-dispo">Stock restant : 10</p>
+                <button class="wishlist">❤️ Ajouter aux favoris</button>
+                <button class="ajouter-panier">Ajouter au panier</button>
+            </div>
+
+        </section>
+
+        <section class="produits">
+            <h2>Vêtements</h2>
+            <div class="produit" data-id="2" data-categorie="vetements" data-nom="Chaussures" data-prix="80">
+                <img src="chaussures.jpg" alt="Chaussures">
+                <h3>Chaussures</h3>
+                <p class="description">Confortables et stylées pour toutes occasions.</p>
+                <p class="prix">80€</p> <!-- Vérification de l'affichage du prix -->
+
+                <!-- Barre de stock juste après le prix -->
+                <div class="stock-bar">
+                   <div class="progression-stock"></div>
+                </div>
+
+                <p class="stock-dispo">Stock restant : 8</p>
+                <button class="wishlist">❤️ Ajouter aux favoris</button>
+                <button class="ajouter-panier">Ajouter au panier</button>
+            </div>
+
+            <div class="produit" data-categorie="vetements">
+                <img src="tshirt-oversize.jpg" alt="T-shirt Oversize Unisexe">
+                <h3>T-shirt Oversize Unisexe</h3>
+                <p class="description">Coupe ample, tissu respirant, disponible en plusieurs couleurs.</p>
+                <span class="prix">25€</span>
+
+                <!-- Barre de stock juste après le prix -->
+                <div class="stock-bar">
+                   <div class="progression-stock"></div>
+                </div>
+
+                <p class="stock-dispo">Stock restant : 7</p>
+                <button class="wishlist">❤️ Ajouter aux favoris</button>
+                <button class="ajouter-panier">Ajouter au panier</button>
+            </div>
+
+            <div class="produit" data-categorie="accessoires">
+                <img src="sac-main-cuir.jpg" alt="Sac à Main Élégant">
+                <h3>Sac à Main en Cuir Élégant</h3>
+                <p class="description">Design minimaliste, cuir véritable, parfait pour un look chic et raffiné.</p>
+                <span class="prix">80€</span>
+
+                <!-- Barre de stock juste après le prix -->
+                <div class="stock-bar">
+                   <div class="progression-stock"></div>
+                </div>
+
+                <p class="stock-dispo">Stock restant : 4</p>
+                <button class="wishlist">❤️ Ajouter aux favoris</button>
+                <button class="ajouter-panier">Ajouter au panier</button>
+        </section>
+
+        <section>
+            <div id="panier">
+                <h3>Votre panier :</h3>
+                <p id="total">Total : 0€</p>
+            </div>
+        </section>
+
+        <button onclick="afficherPanier()">Voir mon panier</button>
+        <button id="viderPanier">Vider le panier</button>
+        <button id="boutonPaiement">Procéder au paiement</button>
+
+    </main>
+    <section id="contact">
+       <h2>Contactez-nous</h2>
+        <p>Besoin d'aide ? Envoyez-nous un email directement.</p>
+    
+        <a href="mailto:support@tonsite.com">📧 Envoyer un email</a>
+    
+        <p>📞 Téléphone : </p>
+    </section>
+
+    <footer>
+        <p>© 2025 Ma Boutique - Tous droits réservés</p>
+        <p>Retrouvez-nous sur :</p>
+        <a href="https://facebook.com/tonsite">Facebook</a>
+        <a href="https://instagram.com/tonsite">Instagram</a>
+        <a href="https://twitter.com/tonsite">Twitter</a>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
